@@ -6,14 +6,14 @@
 </head>
 <body>
 <h1>Add Order</h1>
-<form th:action="@{/addOrder}" method="post">
+<form th:action="@{/newOrder}" method="post">
     Username:
     <input type="text" name="username">
-    <p>How do you place an order?</p>
+    <p>Order in what mode?</p>
     <div>
         <input type="radio" id="standard" name="order" value="standard"
                checked>
-        <label for="standard">standard</label>
+        <label for="Standard">Standard</label>
     </div>
     <div>
         <input type="radio" id="VIP" name="order" value="VIP">
@@ -21,8 +21,8 @@
     </div>
 
     <div>
-        <input type="radio" id="sudden" name="order" value="sudden">
-        <label for="sudden">sudden</label>
+        <input type="radio" id="Sudden" name="order" value="sudden">
+        <label for="sudden">Sudden</label>
         </p>
     </div>
 

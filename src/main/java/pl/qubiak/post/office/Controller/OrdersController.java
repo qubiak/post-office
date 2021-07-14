@@ -3,6 +3,7 @@ package pl.qubiak.post.office.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 import pl.qubiak.post.office.Dao.addOrderDao;
@@ -13,6 +14,11 @@ import java.util.List;
 @RestController
 public class OrdersController {
 
+    private final int VipPin = 8888;
+    private final int SuddenPin = 0000;
+    //Pins entered into the constants only for recruitment purposes.
+    // Normally, each user should have his assigned and encrypted PIN saved in a separate table in the database.
+
     @Autowired
     public addOrderDao addOrderDao;
 
@@ -22,7 +28,7 @@ public class OrdersController {
         return new ModelAndView("addOrder");
     }
 
-    @GetMapping(value = "/newOrdes")
+    @PostMapping(value = "/newOrdes")
     public void newOrders(Orders orders) {
         addOrderDao.newOrder(orders.getUserName(), orders.getRole(), orders.getWaitingTime());
     }

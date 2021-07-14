@@ -20,14 +20,13 @@ public class addOrderDao {
     }
 
     public void newOrder(String userName, String role, Date waitingTime) {
-        String sql = "INSERT INTO order_list(orderId, userName, role, waitingTime) VALUE (NULL, ?, ?, ?)";
-        jdbcTemplate.update(sql, new Object[]{userName, role, waitingTime});
+        String sql = "INSERT INTO order_list(order_id, user_name, role, waiting_time) VALUE (NULL, ?, ?, ?)";
+        jdbcTemplate.update(sql, userName, role, waitingTime);
     }
 
     public List<Orders> ordersList() {
         String sql = "SELECT * FROM order_list";
-        List<Orders> ordersList = jdbcTemplate.query(sql, new OrdersRowMapper());
-        return ordersList;
+        return jdbcTemplate.query(sql, new OrdersRowMapper());
     }
 
 }
