@@ -8,6 +8,6 @@
         <addAutoIncrement
                 columnDataType="int"
                 columnName="id"
-                tableName="app_user"/>
+                tableName="order_list"/>
     </changeSet>
 </databaseChangeLog>

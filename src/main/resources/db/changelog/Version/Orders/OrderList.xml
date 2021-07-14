@@ -4,12 +4,14 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.7
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.7.xsd">
 
-    <changeSet id="5" author="qubiak">
-        <createTable tableName="queue">
+    <changeSet id="1" author="qubiak">
+        <createTable tableName="order_list">
             <column name="id" type="int" autoIncrement="false">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="user_name_ID" type="int"/>
+            <column name="user_name" type="varchar(255)"/>
+            <column name="role" type="varchar(255)"/>
+            <column name="order_id" type="int"/>
             <column name="waiting_time" type="time"/>
         </createTable>
     </changeSet>
