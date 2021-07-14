@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>add order</title>
+</head>
+<body>
+<h1>Check your place in the queue</h1>
+<form th:action="@{/getQueueByOrderId}" method="post">
+    <p>Enter order id:</p>
+    <input type="text" name="orderid">
+    <input type="submit" value="OK">
+</form>
+
+</body>
+</html>

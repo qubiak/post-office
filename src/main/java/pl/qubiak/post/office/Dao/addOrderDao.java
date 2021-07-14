@@ -29,4 +29,15 @@ public class addOrderDao {
         return jdbcTemplate.query(sql, new OrdersRowMapper());
     }
 
+    public String getOrderId(String username) {
+        String sql = "SELECT order_id FROM order_list WHERE user_name = ?";
+        return jdbcTemplate.queryForObject(sql, String.class, username);
+    }
+
+    public List<Orders> getOrderById(int id) {
+        String sql = "SELECT * FROM order_list ORDER BY order_id ASC";
+        List<Orders> orders = jdbcTemplate.query(sql, new OrdersRowMapper());
+        return orders;
+    }
 }
+

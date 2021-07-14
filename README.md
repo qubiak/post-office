@@ -49,13 +49,14 @@ In the application, the teacher asks questions about the topic being presented. 
 ## Screenshots
 
 ![Example screenshot](./img/addOrder.jpg)
+![Example screenshot](./img/checkQueue.jpg)
 
 
 ## Setup
-Save the "orders" database on your computer and import it into the AMPPS program. Clone the repository and run it. go to
+Save the "post_office" database on your computer and import it into the AMPPS program. Clone the repository and run it. go to
 http: // localhost: 8080 / newOrdes
 to add an order or
-http: // localhost: 8080 / getOrderList
+http: // localhost: 8080 / getQueueByOrderId
 to see the complete order list with lead times.
 
 
