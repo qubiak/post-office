@@ -2,10 +2,7 @@ package pl.qubiak.post.office.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import pl.qubiak.post.office.Dao.addOrderDao;
 import pl.qubiak.post.office.Model.Orders;
@@ -29,7 +26,7 @@ public class OrdersController {
         return new ModelAndView("addOrder");
     }
 
-    @GetMapping(value = "/newOrder")
+    @PostMapping(value = "/newOrder")
     public String newOrders(@RequestParam(value = "username") String username,
                             @RequestParam(value = "role") String role,
                             @RequestParam(value = "pin", required = false) String pin) {
@@ -52,7 +49,7 @@ public class OrdersController {
     }
 
     @PostMapping(value = "/getQueueByOrderId")
-    public List<Orders> getQueueByOrderId(@RequestParam(value = "orderid") int orderId) {
+    public List<Orders> getQueueByOrderId(@RequestParam(value = "order_id") int orderId) {
         return addOrderDao.getOrderById(orderId);
     }
 }
