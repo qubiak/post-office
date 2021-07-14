@@ -8,33 +8,29 @@ public class Orders {
 
     @Id
     @GeneratedValue
-    private Long id;
+    private Long orderId;
     @Column(name = "user_name")
     private String userName;
     private String role;
-    @Column(name = "order_id")
-    private Long orderId;
     @Column(name = "waiting_time")
     private Date waitingTime;
-
 
     public Orders() {
     }
 
-    public Orders(Long id, String userName, String role, Long orderId, Date waitingTime) {
-        this.id = id;
+    public Orders(Long orderId, String userName, String role, Date waitingTime) {
+        this.orderId = orderId;
         this.userName = userName;
         this.role = role;
-        this.orderId = orderId;
         this.waitingTime = waitingTime;
     }
 
-    public Long getId() {
-        return id;
+    public Long getOrderId() {
+        return orderId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setOrderId(Long orderId) {
+        this.orderId = orderId;
     }
 
     public String getUserName() {
@@ -51,14 +47,6 @@ public class Orders {
 
     public void setRole(String role) {
         this.role = role;
-    }
-
-    public Long getOrderId() {
-        return orderId;
-    }
-
-    public void setOrderId(Long orderId) {
-        this.orderId = orderId;
     }
 
     public Date getWaitingTime() {

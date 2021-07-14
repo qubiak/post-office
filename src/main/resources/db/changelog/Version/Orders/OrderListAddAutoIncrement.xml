@@ -7,7 +7,7 @@
     <changeSet author="qubiak" id="2">
         <addAutoIncrement
                 columnDataType="int"
-                columnName="id"
+                columnName="order_id"
                 tableName="order_list"/>
     </changeSet>
 </databaseChangeLog>

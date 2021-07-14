@@ -6,12 +6,11 @@
 
     <changeSet id="1" author="qubiak">
         <createTable tableName="order_list">
-            <column name="id" type="int" autoIncrement="false">
+            <column name="order_id" type="int" autoIncrement="false">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="user_name" type="varchar(255)"/>
             <column name="role" type="varchar(255)"/>
-            <column name="order_id" type="int"/>
             <column name="waiting_time" type="time"/>
         </createTable>
     </changeSet>

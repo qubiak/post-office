@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>add order</title>
+</head>
+<body>
+<h1>Add Order</h1>
+<form th:action="@{/addOrder}" method="post">
+    Username:
+    <input type="text" name="username">
+    <p>How do you place an order?</p>
+    <div>
+        <input type="radio" id="standard" name="order" value="standard"
+               checked>
+        <label for="standard">standard</label>
+    </div>
+    <div>
+        <input type="radio" id="VIP" name="order" value="VIP">
+        <label for="VIP">VIP</label>
+    </div>
+
+    <div>
+        <input type="radio" id="sudden" name="order" value="sudden">
+        <label for="sudden">sudden</label>
+        </p>
+    </div>
+
+    PIN:
+    <input type="text" name="PIN">
+    </p>
+    <input type="submit" value="OK">
+</form>
+
+</body>
+</html>
