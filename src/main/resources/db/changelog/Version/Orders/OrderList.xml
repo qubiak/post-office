@@ -11,7 +11,7 @@
             </column>
             <column name="user_name" type="varchar(255)"/>
             <column name="role" type="varchar(255)"/>
-            <column name="waiting_time" type="time"/>
+            <column name="waiting_time" type="timestamp"/>
         </createTable>
     </changeSet>
 

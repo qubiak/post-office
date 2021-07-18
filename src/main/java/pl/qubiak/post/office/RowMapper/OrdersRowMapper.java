@@ -12,11 +12,10 @@ public class OrdersRowMapper implements RowMapper {
     public Orders mapRow(ResultSet resultSet, int i) throws SQLException {
 
         Orders orders = new Orders();
-        orders.setOrderId(resultSet.getLong("OrderId"));
-        orders.setUserName(resultSet.getString("userName"));
+        orders.setOrderId(resultSet.getLong("order_id"));
+        orders.setUserName(resultSet.getString("user_name"));
         orders.setRole(resultSet.getString("role"));
-        orders.setWaitingTime(resultSet.getTime("waitingTime"));
-
+        orders.setWaitingTime(resultSet.getTimestamp("waiting_time").toInstant());
         return orders;
     }
 }

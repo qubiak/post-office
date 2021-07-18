@@ -1,7 +1,7 @@
 package pl.qubiak.post.office.Model;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.Instant;
 
 @Entity
 public class Orders {
@@ -13,12 +13,12 @@ public class Orders {
     private String userName;
     private String role;
     @Column(name = "waiting_time")
-    private Date waitingTime;
+    private Instant waitingTime;
 
     public Orders() {
     }
 
-    public Orders(Long orderId, String userName, String role, Date waitingTime) {
+    public Orders(Long orderId, String userName, String role, Instant waitingTime) {
         this.orderId = orderId;
         this.userName = userName;
         this.role = role;
@@ -49,11 +49,11 @@ public class Orders {
         this.role = role;
     }
 
-    public Date getWaitingTime() {
+    public Instant getWaitingTime() {
         return waitingTime;
     }
 
-    public void setWaitingTime(Date waitingTime) {
+    public void setWaitingTime(Instant waitingTime) {
         this.waitingTime = waitingTime;
     }
 }
